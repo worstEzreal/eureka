@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cherry-common-eureka
+
+server:
+  port: 9500
+
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 30000
+    use-read-only-response-cache: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://localhost:9500/eureka
